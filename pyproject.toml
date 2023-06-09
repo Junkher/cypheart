@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "cypheart"
+version = "0.1.0"
+description = ""
+authors = ["Junkher <1344065492@qq.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+langchain = "^0.0.189"
+transformers = {git = "https://github.com/huggingface/transformers.git"}
+fastapi = {extras = ["all"], version = "^0.96.0"}
+python-dotenv = "^1.0.0"
+neo4j = "^5.9.0"
+
+[[tool.poetry.source]]
+name = "mirrors"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
+priority = "primary"
+
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "default"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
